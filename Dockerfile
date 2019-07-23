@@ -17,10 +17,6 @@ RUN pip3 install numpy pandas sklearn keras tensorflow matplotlib pillow argpars
 
 RUN mkdir /app
 
-RUN mkdir /data
-
-RUN mkdir /training-set
-
 COPY build_model.py /app
 
 WORKDIR /app
