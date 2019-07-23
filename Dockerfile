@@ -20,5 +20,3 @@ RUN mkdir /app
 COPY build_model.py /app
 
 WORKDIR /app
-
-RUN python3 build_model.py
