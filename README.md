@@ -4,7 +4,7 @@
 * Ekincan Ufuktepe
 
 ### Description of files
-* build_python.py: sets up a basic model based on Keras MNIST data
+* build_python.py: sets up a basic model based on Keras MNIST data <br>
 ** note: increasing the number of epochs to 20 increases the accuracy to 0.9963
 
 ### How to test for replicability:
