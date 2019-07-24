@@ -4,6 +4,25 @@ def RepresentsInt(s):
                 return True
         except ValueError:
                 return False
+	
+def OptimizerSelection():
+	print("Please Select the Optimizer [1,5] for the Model:")
+	print("1) SGD")
+	print("2) ADAM")
+	print("3) RMSPROP")
+	print("4) ADAGRAD")
+	print("5) ADADELTA")
+	selection = input()
+	if selection=='1' :
+		return 'sgd'
+	elif selection=='2' :
+		return 'adam'
+	elif selection=='3' :
+		return 'rmsprop'
+	elif selection=='4' :
+		return 'adagrad'
+	elif selection=='5' :
+		return 'adadelta'
 
 #change number of epochs
 import numpy
@@ -14,6 +33,8 @@ while not RepresentsInt(tmp_num_of_epochs):
 	if not RepresentsInt(tmp_num_of_epochs):
 		print("NOT A NUMBER")
 num_of_epochs=int(str(tmp_num_of_epochs))
+
+selected_optimizer=OptimizerSelection()
 
 #import training and test data sets from keras
 from keras.datasets import mnist 
@@ -56,6 +77,6 @@ from keras.optimizers import RMSprop
 
 #sets up, runs, and tunes the model based on provided training and test data
 model = Model(inputs=i, outputs=o)
-model.compile( loss="categorical_crossentropy", optimizer=RMSprop(), metrics=["accuracy"])
+model.compile( loss="categorical_crossentropy", optimizer=selected_optimizer, metrics=["accuracy"])
 model.fit(x_train, y_train, epochs=num_of_epochs)
 model.evaluate(x_test, y_test)
