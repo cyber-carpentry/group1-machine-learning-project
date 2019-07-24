@@ -13,15 +13,15 @@ def OptimizerSelection():
 	print("4) ADAGRAD")
 	print("5) ADADELTA")
 	selection = input()
-	if selection==1 :
+	if selection=='1' :
 		return 'sdg'
-	elif selection==2 :
+	elif selection=='2' :
 		return 'adam'
-	elif selection==3 :
+	elif selection=='3' :
 		return 'rmsprop'
-	elif selection==3 :
+	elif selection=='4' :
 		return 'adagrad'
-	elif selection==5 :
+	elif selection=='5' :
 		return 'adadelta'
 
 #change number of epochs
