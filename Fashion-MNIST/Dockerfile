@@ -1,5 +1,5 @@
 ######### DOCKER BUILD PROCESS #########
-# To run your Dockerfile you need to set your YOUR_DOCERHUB_NAME first
+# To run your Dockerfile you need to set your YOUR_DOCKERHUB_NAME first
 # Then build your Dockerfile by entering the command below.
 # docker build -t $YOUR_DOCKERHUB_NAME/my-docker-repo .
 ########################################
