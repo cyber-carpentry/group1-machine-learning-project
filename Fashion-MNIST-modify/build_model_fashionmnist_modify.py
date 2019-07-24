@@ -6,15 +6,15 @@ def RepresentsInt(s):
                 return False
 
 def OptimizerSelection():
-	print("Please Select the Optimizer [1,5] for the Model:\n")
-	print("1) SDG\n")
-	print("2) ADAM\n")
+	print("Please Select the Optimizer [1,5] for the Model:")
+	print("1) SGD")
+	print("2) ADAM")
 	print("3) RMSPROP")
 	print("4) ADAGRAD")
 	print("5) ADADELTA")
 	selection = input()
 	if selection=='1' :
-		return 'sdg'
+		return 'sgd'
 	elif selection=='2' :
 		return 'adam'
 	elif selection=='3' :
