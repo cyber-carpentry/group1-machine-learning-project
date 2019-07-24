@@ -4,14 +4,18 @@
 * Ekincan Ufuktepe
 
 ### Description of files
-* build_python.py: sets up a basic model based on Keras MNIST data <br>
+In mnist directory:
+* build_model.py: sets up a basic model based on Keras MNIST data <br>
 ** note: increasing the number of epochs to 20 increases the accuracy to 0.9963
+* sample_output.txt: provides sample output information for the basic model
 
-### How to test for replicability:
-* sample_output.txt: provides output information for the basic model
+In Fashion-MNIST directory:
+* build_model_fashionmnist.py: sets up a basic model for analyzing fashion MNIST data set
+* item_viz.png: visualizes classification of different clothing categories; way to check if the basic set-up is working
+* sample_output_fashionmnist.txt: provides sample output information for the basic fashion model 
 
 ### How to modify the files for reusability:
-1) To improve model:
+1) To improve either model:
 - change the number of epochs in line X
 
 2) To use the model for different data:
