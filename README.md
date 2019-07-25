@@ -13,8 +13,9 @@ This project provides Docker images that have been prepared with all necessary p
  
 All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
 
-mnist: builds and trains a basic neural network using the mnist dataset to recognized handwritten numbers
-mnist_XX: allows the user to change parameters and optimization scheme of basic neural network model
+The following directories contain:
+* mnist: builds and trains a basic neural network using the mnist dataset to recognized handwritten numbers
+* mnist_XX: allows the user to change parameters and optimization scheme of basic neural network model
 fashion-mnist
 
   
