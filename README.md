@@ -4,17 +4,25 @@
 * Ekincan Ufuktepe
 
 ### Description of Deliverables and Hands-on Instructions
+ 
+  `$ git clone https://github.com/cyber-carpentry/group1-machine-learning-project.git`
+  
 1) Reproducibility of both datasets and models
 
-`$ docker pull <image>`
+  `$ docker pull <image>`
+  `$ docker run -it <image>`
 
 2) Reusability of neural network models 
-
+  
+  `$ docker pull <image>`
+  `$ docker run -it <image>`
+  
 3) Reusability of datasets
-
+  `$ `
 4) Reusability of datasets and models
-
-
+  `$ docker pull <image>`
+  `$ docker run -it <image>`
+  
 ### Description of files
 In mnist directory:
 * build_model.py: sets up a basic model based on Keras MNIST data <br>
