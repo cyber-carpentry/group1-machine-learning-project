@@ -1,4 +1,4 @@
-#### Reproducibility and Reusability of Machine Learning with MNIST & Fashion-MNIST Datasets
+## Reproducibility and Reusability of Machine Learning with MNIST & Fashion-MNIST Datasets
 
 ### Group Members
 * Natalie Chin
