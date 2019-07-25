@@ -38,6 +38,7 @@ All of these deliverables have been published as DockerHub images and can be eas
 #### 1) Reproducing basic neural network models for mnist and fashion-mnist
 
 mnist: `docker push ekincanufuktepe/mnist-reproducability`
+
 fashion-mnist: `docker push ekincanufuktepe/fashion-mnist-reproducability`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the X optimization scheme.  Sample output is provided in each of the docker containers, which a new user can use to determine if the model builds have run successfully.
@@ -45,6 +46,7 @@ These two docker images will build containers that provide basic trained neural 
 #### 2) Modifying basic neural network models for mnist and fashion-mnist 
 
 mnist: `docker push ekincanufuktepe/mnist-reusability`
+
 fashion-mnist: `docker push ekincanufuktepe/fashion-mnist-reusability`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
