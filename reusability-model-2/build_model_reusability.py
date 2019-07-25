@@ -72,26 +72,26 @@ tf.set_random_seed(1)
 #(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 ((x_train, y_train), (x_test, y_test)), image_size, category_size, selection=SelectDataset()
 
-type(train_images)
+type(x_train)
 
-train_images = train_images / 255.0
-test_images = test_images / 255.0
+x_train = x_train / 255.0
+x_test = x_test / 255.0
 
-class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 
-                       'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+#class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 
+#                       'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
 #creates output image file that allow visualization of different class types
 
-fig = plt.figure(figsize=(category_size,category_size))
+#fig = plt.figure(figsize=(category_size,category_size))
 
-for i in range(25):
-    plt.subplot(5,5,i+1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.grid(False)
-    plt.imshow(train_images[i], cmap=plt.cm.binary)
-    plt.xlabel(class_names[train_labels[i]])
-plt.savefig('item_viz.png')
+#for i in range(25):
+#    plt.subplot(5,5,i+1)
+#    plt.xticks([])
+#    plt.yticks([])
+#    plt.grid(False)
+#    plt.imshow(x_train[i], cmap=plt.cm.binary)
+#    plt.xlabel(class_names[y_train[i]])
+#plt.savefig('item_viz.png')
 
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(image_size, image_size)),
@@ -102,7 +102,7 @@ model = keras.Sequential([
 model.compile(optimizer=selected_optimizer, 
     loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(train_images, train_labels, epochs=num_of_epochs)
+model.fit(x_train, y_train, epochs=num_of_epochs)
 
-test_loss, test_acc = model.evaluate(test_images, test_labels)
+test_loss, test_acc = model.evaluate(x_test, y_test)
 print('Test accuracy:', test_acc)
