@@ -25,6 +25,10 @@ def OptimizerSelection():
 		return 'adadelta'
 
 from keras.datasets import cifar10, cifar100, mnist, fashion_mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+selection=1
+image_size=28
+category_size=10
 def SelectDataset():
 	print("Please Select the Dataset given [1-4] below:")
 	print("1) CIFAR10")
@@ -33,13 +37,21 @@ def SelectDataset():
 	print("4) FASHION-MNIST")
 	selection = input()
 	if selection=='1' :
-		return cifar10.load_data(), 32, 10
+		return cifar10.load_data(), 32, 10, selection
+		#image_size=32
+		#category_size=10
 	elif selection=='2' :
-		return cifar100.load_data(label_mode='fine'), 32, 10
+		return cifar100.load_data(label_mode='fine'), 32, 100, selection
+		#image_size=32
+		#category_size=10
 	elif selection=='3' :
-		return mnist.load_data(), 28, 10
+		return mnist.load_data(), 28, 10, selection
+		#image_size=28
+		#category_size=10
 	elif selection=='4' :
-		return fashion_mnist.load_data(), 28, 10
+		return fashion_mnist.load_data(), 28, 10, selection
+		#image_size=28
+		#category_size=10
 
 #change number of epochs
 import numpy
@@ -56,7 +68,13 @@ selected_optimizer=OptimizerSelection()
 #import training and test data sets from keras
 #from keras.datasets import mnist 
 #(x_train, y_train), (x_test, y_test) = mnist.load_data()
-(x_train, y_train), (x_test, y_test), image_size, category_size=SelectDataset()
+#((x_train, y_train), (x_test, y_test)), image_size, category_size=SelectDataset()
+#print(image_size)
+#print(category_size)
+#(x_train, y_train), (x_test, y_test) = mnist.load_data()
+((x_train, y_train), (x_test, y_test)), image_size, category_size, selection=SelectDataset()
+#image_size=28
+#category_size=10
 
 #imports to_categorical function from keras utilities
 from keras.utils import to_categorical
@@ -72,6 +90,10 @@ y_test = to_categorical(y_test, category_size)
 #creates import layer using keras function
 from keras.layers import Input
 i = Input(shape=(image_size,image_size))
+if selection=='1' or selection=='2':
+	i = Input(shape=(image_size, image_size, 3))
+else:
+	i = Input(shape=(image_size,image_size))
 
 #flattens input layer
 from keras.layers import Flatten
