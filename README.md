@@ -35,31 +35,31 @@ This project provides Docker images that have been prepared with all necessary p
  
 All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
   
-1) Reproducing basic neural network models for mnist and fashion-mnist
+#### 1) Reproducing basic neural network models for mnist and fashion-mnist
 
 mnist: <image>
 fashion-mnist: <image>
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the X optimization scheme.  Sample output is provided in each of the docker containers, which a new user can use to determine if the model builds have run successfully.
 
-2) Modifying basic neural network models for mnist and fashion-mnist 
+#### 2) Modifying basic neural network models for mnist and fashion-mnist 
 
 mnist: <image>
 fashion-mnist: <image>
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
 
-3) Reusability of datasets **
+#### 3) Reusability of datasets **
 
 mnist: <image>
 fashion-mnist: <image>
  
-4) Replicability of basic neural network models for mnist and fashion-mnist 
+#### 4) Replicability of basic neural network models for mnist and fashion-mnist 
 
-### MODEL #1
+##### MODEL #1
 `docker pull ekincanufuktepe/reusability-model-1`
 
-### MODEL #2
+##### MODEL #2
 `docker pull ekincanufuktepe/reusability-model-2`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input and run using new datasets.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
