@@ -5,7 +5,7 @@
 
 ### Description of Deliverables and Hands-on Instructions
  
-  `$ git clone https://github.com/cyber-carpentry/group1-machine-learning-project.git`
+  `$ git clone https://github.com/cyber-carpentry/group1-machine-learning-project`
   
 1) Reproducibility of both datasets and models
 
