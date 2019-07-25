@@ -92,12 +92,23 @@ x_test = x_test / 255.0
 #    plt.imshow(x_train[i], cmap=plt.cm.binary)
 #    plt.xlabel(class_names[y_train[i]])
 #plt.savefig('item_viz.png')
-
 model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(image_size, image_size)),
-    keras.layers.Dense(3, activation=tf.nn.relu), 
-    keras.layers.Dense(category_size, activation=tf.nn.softmax)
+	keras.layers.Flatten(input_shape=(image_size, image_size)),
+	keras.layers.Dense(3, activation=tf.nn.relu), 
+	keras.layers.Dense(category_size, activation=tf.nn.softmax)
 ])
+if selection=='1' or selection=='2':
+	model = keras.Sequential([
+		keras.layers.Flatten(input_shape=(image_size, image_size, 3)),
+		keras.layers.Dense(3, activation=tf.nn.relu), 
+		keras.layers.Dense(category_size, activation=tf.nn.softmax)
+	])
+else:
+	model = keras.Sequential([
+		keras.layers.Flatten(input_shape=(image_size, image_size)),
+		keras.layers.Dense(3, activation=tf.nn.relu), 
+		keras.layers.Dense(category_size, activation=tf.nn.softmax)
+	])
 
 model.compile(optimizer=selected_optimizer, 
     loss='sparse_categorical_crossentropy', metrics=['accuracy'])
