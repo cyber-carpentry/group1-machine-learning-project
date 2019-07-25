@@ -20,4 +20,4 @@ RUN mkdir /usr/ml-project \
 
 WORKDIR  /usr/ml-project/group1-machine-learning-project/reusability-model-1
 
-CMD python3 build_model_reusability.py
+CMD python3 build_model_reusability.py && /bin/bash
