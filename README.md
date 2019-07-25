@@ -1,4 +1,7 @@
-## Reproducibility and Reusability of Machine Learning with MNIST & Fashion-MNIST Datasets
+## Reproducibility and Reusability of Deep Neural Networks with MNIST & Fashion-MNIST Datasets
+
+This project aims to improve the reproducibility and reusability of deep neural network models using MNIST and Fashion-MNIST datasets. In terms of reproducibility, it aims at improving the automatization of model training using existing datasets, established neural network architecture, and fixed machine learning parameters. In terms of reusability, it provides several options, including reusing the generated model with different datasets and reusing datasets with different neural network models. This project will benefit . It will also benefit those people who want to go through learn deep learning but have little experience in coding and debugging.
+
 
 ### Group Members
 * Natalie Chin
@@ -20,11 +23,11 @@ In Fashion-MNIST directory:
 
 ### Description of Deliverables and Hands-on Instructions
  
-In this project, we aimed at improving the reproducibility and reusability of neural network models using MNIST and Fashion-MNIST datasets. In terms of reproducibility, it aims at improving the automatization of model training using existing datasets, established neural network architecture, and fixed machine learning parameters. In terms of reusability, it provides several options, including reusing the generated model with different datasets, reusing datasets with different neural network models. All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
+In this project, we aimed at improving the reproducibility and reusability of neural network models using MNIST and Fashion-MNIST datasets. All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
   
 1) Reproducibility of both datasets and models
 
-The reproducibility of 
+   If you are 
 
    `$ docker pull <image>`
   
