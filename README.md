@@ -67,8 +67,12 @@ The scripts in this directory allow the user to import new images and process th
 
 *In order to run this script, docker build must be run for Model #2 above.
 
- `docker build ekincanufuktepe/reusability-model-2`
+ `docker pull ekincanufuktepe/reusability-model-2`
+
+ `docker run ekincanufuktepe/reusability-model-2`
+ 
+ - make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
 
  `cd ../newimages/`
 
- `python predict_new_image.py` #modify this script to change the image that you are analyzing
+ `python3 predict_new_image.py` #modify this script to change the image that you are analyzing
