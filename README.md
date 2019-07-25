@@ -37,10 +37,14 @@ All of these deliverables have been published as DockerHub images and can be eas
   
    `$ docker run -it <image>`
   
+### Hands-on Instructions
 
-### How to modify the files for reusability:
-1) To improve either model:
-- change the number of epochs in line X
+1. Log-on to a machine that is prepared with Dockerhub.  It can be your own computer, a Jetstream instance or other virtual machine.  If you use a Jetstream instance, a medium sized instance of Ubuntu 18.04 Devel and Docker v1.22 is suggested.
 
-2) To use the model for different data:
-- change the input data; change size of training and test data sets based (as needed)
+2. From the command line interface, docker pull the image from DockerHub.
+
+\\\ docker pull <image> \\\
+
+3. Use docker to run the desired image.
+
+\\\ docker run -it <image> \\\
