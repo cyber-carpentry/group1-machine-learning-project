@@ -16,8 +16,9 @@ RUN pip3 install numpy==1.16.4 pandas==0.25.0 keras==2.2.4 tensorflow==1.14.0 ma
 
 RUN mkdir /usr/ml-project \
 	&& cd /usr/ml-project \
-	&& git clone https://github.com/cyber-carpentry/group1-machine-learning-project.git
 
 WORKDIR  /usr/ml-project/group1-machine-learning-project/reusability-model-2
 
-CMD python3 build_model_reusability.py && /bin/bash
+CMD git clone https://github.com/cyber-carpentry/group1-machine-learning-project.git \ 
+	&& python3 build_model_reusability.py \ 
+	&& /bin/bash
