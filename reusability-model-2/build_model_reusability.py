@@ -117,3 +117,14 @@ model.fit(x_train, y_train, epochs=num_of_epochs)
 
 test_loss, test_acc = model.evaluate(x_test, y_test)
 print('Test accuracy:', test_acc)
+
+#sets up, runs, and tunes the model based on provided training and test data
+from keras.models import model_from_json
+import os
+
+#create and save model as .json file
+model_json = model.to_json()
+with open("model.json", "w") as json_file:
+        json_file.write(model_json)
+model.save_weights("model.h5")
+json_file.close()
