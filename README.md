@@ -9,50 +9,54 @@ This project provides Docker images that have been prepared with all necessary p
 * Kaiwen Chen
 * Ekincan Ufuktepe
 
-### Description of Deliverables
- 
-All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
-
-The following directories contain:
-* mnist: builds and trains a basic neural network using the mnist dataset to recognized handwritten numbers
-* mnist_XX: allows the user to change parameters and optimization scheme of basic neural network model
-fashion-mnist
-
-  
-1) Reproducibility of both datasets and models
-
-   If you want to get the trained model for the classifications of  
-
-   `$ docker pull <image>`
-  
-   `$ docker run -it <image>`
-
-2) Reusability of neural network models 
-  
-   `$ docker pull <image>`
-  
-   `$ docker run -it <image>`
-  
-3) Reusability of datasets
-  
-   `$ `
-  
-4) Reusability of datasets and models
-  
-   `$ docker pull <image>`
-  
-   `$ docker run -it <image>`
-  
-### Hands-on Instructions
+### Hands-on Instructions for Running Docker Images
 
 1. Log-on to a machine that is prepared with Dockerhub.  It can be your own computer, a Jetstream instance or other virtual machine.  If you use a Jetstream instance, a medium sized instance of Ubuntu 18.04 Devel and Docker v1.22 is suggested.
 
-2. From the command line interface, docker pull the image from DockerHub.
+2. From the command line interface, docker pull the image from DockerHub (see below for image descriptions).
 
  `$ docker pull <image>`
+ 
+ For example:  `$ docker pull <image>`
 
-3. Use docker to run the desired image.
+3. Use docker to run the desired image (see below for image descriptions).
 
  `$ docker run -it <image>`
+ 
+ For example:  `$ docker run -it <image>`
 
 4. If applicable, follow the prompts to get the model built and trained.
+
+5. To exit the container, type the following at the command prompt.
+
+ `$ exit()`
+
+### Description of Deliverables
+ 
+All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
+  
+1) Reproducing basic neural network models for mnist and fashion-mnist
+
+mnist: <image>
+fashion-mnist: <image>
+
+These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the X optimization scheme.  Sample output is provided in each of the docker containers, which a new user can use to determine if the model builds have run successfully.
+
+2) Modifying basic neural network models for mnist and fashion-mnist 
+
+mnist: <image>
+fashion-mnist: <image>
+
+These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
+
+3) Reusability of datasets **
+  
+mnist: <image>
+fashion-mnist: <image>
+ 
+4) Replicability of basic neural network models for mnist and fashion-mnist 
+
+mnist: <image>
+fashion-mnist: <image>
+
+These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input and run using new datasets.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
