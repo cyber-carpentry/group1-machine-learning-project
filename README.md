@@ -51,13 +51,7 @@ Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reusability`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
 
-#### 3) Reusability of datasets **
-
-Fashion-MNIST: <image> -- in progress
- 
-This docker image builds, runs and saves a model that has been trained and tuned using the Fashion-MNIST dataset.  Users can import new images and process them using X python script, which will resize and recolor them for model processing, as well as run in through the saved model and provide a prediction for what it thinks the item contains according to the original ten classes. 
- 
-#### 4) Replicability of basic neural network models for mnist and fashion-mnist 
+#### 3) Replicability of basic neural network models for mnist and fashion-mnist 
 
 ##### Model #1
 `docker pull ekincanufuktepe/reusability-model-1`
@@ -66,3 +60,13 @@ This docker image builds, runs and saves a model that has been trained and tuned
 `docker pull ekincanufuktepe/reusability-model-2`
 
 These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
+
+#### 4) Reusability of datasets **
+
+The scripts in this directory allow the user to import new images and process them using the predict_new_image.py python script, which will resize and recolor them for model processing, as well as run them through a saved model, which provides a prediction for what it thinks the image  contains according to the original ten classes.  The directory contains a few sample images, which are names "modified_<item name>.jpeg"
+
+*In order to run this script, docker build must be run for Model #2 above.
+
+`docker build ekincanufuktepe/reusability-model-2`
+`cd ../newimages/`
+`python predict_new_image.py` #modify this script to change the image that you are analyzing
