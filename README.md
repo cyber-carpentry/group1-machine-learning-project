@@ -27,7 +27,7 @@ This project provides Docker images that have been prepared with all necessary p
 
 4. If applicable, follow the prompts to get the model built and trained.
 
-5. To exit the container, type the following at the command prompt.
+5. To exit the container, type the following at the command prompt:
 
  `$ exit()`
 
@@ -51,8 +51,9 @@ These two docker images will build containers that provide basic trained neural 
 
 #### 3) Reusability of datasets **
 
-mnist: <image>
-fashion-mnist: <image>
+fashion-mnist: <image> -- in progress
+ 
+This docker image builds, runs and saves a model that has been trained and tuned using the Fashion-MNIST dataset.  Users can import new images and process them using X python script, which will resize and recolor them for model processing, as well as run in through the saved model and provide a prediction for what it thinks the item contains according to the original ten classes. 
  
 #### 4) Replicability of basic neural network models for mnist and fashion-mnist 
 
@@ -62,4 +63,4 @@ fashion-mnist: <image>
 ##### Model #2
 `docker pull ekincanufuktepe/reusability-model-2`
 
-These two docker images will build containers that have a different number of hidden layers (three and one, respectively) and a different number of nodes than the original model (how many?).  Users are prompted to change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
+These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
