@@ -1,6 +1,8 @@
 ## Reproducibility and Reusability of Deep Neural Networks with MNIST & Fashion-MNIST Datasets
 
-This project aims to improve the reproducibility and reusability of deep neural network models using MNIST and Fashion-MNIST datasets. In terms of reproducibility, it aims at improving the automatization of model training using existing datasets, established neural network architecture, and fixed machine learning parameters. In terms of reusability, it provides several options, including reusing the generated model with different datasets and reusing datasets with different neural network models. This project will benefit . It will also benefit those people who want to go through learn deep learning but have little experience in coding and debugging.
+This project aims to improve the reproducibility and reusability of deep neural network models using MNIST and Fashion-MNIST datasets. In terms of reproducibility, it aims at improving the automatization of model training using existing datasets, established neural network architecture, and fixed machine learning parameters. In terms of reusability, it provides several options, including reusing the generated model with different datasets and reusing datasets with different neural network models. 
+
+This project will provide a setup work environment prepared with all packages installed and neural networks established for model training and data analysis. It will also benefit those people who want to go through deep learning but have little experience or simply don't want to waste their time in coding and debugging. This project selects MNIST and fashion-MNIST as a start. For future potentials, people can refer to the provided Dockerfiles in each folder to make their specific model and datasets reproducible and reusable.
 
 
 ### Group Members
