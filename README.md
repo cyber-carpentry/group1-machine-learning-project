@@ -18,8 +18,11 @@
   `$ docker run -it <image>`
   
 3) Reusability of datasets
+  
   `$ `
+  
 4) Reusability of datasets and models
+  
   `$ docker pull <image>`
   `$ docker run -it <image>`
   
