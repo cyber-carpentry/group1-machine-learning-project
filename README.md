@@ -11,9 +11,9 @@ This project provides Docker images that have been prepared with all necessary p
 
 ### Hands-on Instructions for Running Docker Images
 
-1. Log-on to a machine that is prepared with Dockerhub.  It can be your own computer, a Jetstream instance or other virtual machine.  If you use a Jetstream instance, a medium sized instance of Ubuntu 18.04 Devel and Docker v1.22 is suggested.
+1. Log-on to a machine that is prepared with Docker Hub.  It can be your own computer, a Jetstream instance or other virtual machine.  If you use a Jetstream instance, a medium sized instance of Ubuntu 18.04 Devel and Docker v1.22 is suggested.
 
-2. From the command line interface, docker pull the image from DockerHub (see below for image descriptions).
+2. From the command line interface, docker pull the image from Docker Hub (see below for image descriptions).
 
  `$ docker pull <image>`
  
@@ -33,9 +33,9 @@ This project provides Docker images that have been prepared with all necessary p
 
 ### Description of Deliverables
  
-All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
+All of these deliverables have been published as Docker Hub images and can be easily used simply by running a Docker Hub container. 
   
-#### 1) Reproducing basic neural network models for mnist and fashion-mnist
+#### 1) Reproducing basic neural network models for MNIST and Fashion-MNIST
 
 MNIST: `docker push ekincanufuktepe/mnist-reproducability`
 
@@ -43,7 +43,7 @@ Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reproducability`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the X optimization scheme.  Sample output is provided in each of the docker containers, which a new user can use to determine if the model builds have run successfully.
 
-#### 2) Modifying basic neural network models for mnist and fashion-mnist 
+#### 2) Modifying basic neural network models for MNIST and Fashion-MNIST
 
 MNIST: `docker push ekincanufuktepe/mnist-reusability`
 
@@ -51,7 +51,7 @@ Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reusability`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
 
-#### 3) Replicability of basic neural network models for mnist and fashion-mnist 
+#### 3) Replicability of basic neural network models for MNIST and Fashion-MNIST 
 
 ##### Model #1
 `docker pull ekincanufuktepe/reusability-model-1`
@@ -61,7 +61,7 @@ These two docker images will build containers that provide basic trained neural 
 
 These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
 
-#### 4) Reusability of datasets **
+#### 4) Reusability of datasets
 
 The scripts in this directory allow the user to import new images and process them using the predict_new_image.py python script, which will resize and recolor them for model processing, as well as run them through a saved model, which provides a prediction for what it thinks the image  contains according to the original ten classes.  The directory contains a few sample images, which are names "modified_<name_of_item>.jpeg".
 
