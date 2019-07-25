@@ -3,6 +3,17 @@
 * Kaiwen Chen
 * Ekincan Ufuktepe
 
+### Description of Deliverables and Hands-on Instructions
+1) Reproducibility of both datasets and models
+
+`$ docker pull <image>`
+2) Reusability of neural network models 
+
+3) Reusability of datasets
+
+4) Reusability of datasets and models
+
+
 ### Description of files
 In mnist directory:
 * build_model.py: sets up a basic model based on Keras MNIST data <br>
