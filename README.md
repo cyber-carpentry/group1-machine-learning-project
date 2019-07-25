@@ -62,4 +62,4 @@ fashion-mnist: <image>
 ##### Model #2
 `docker pull ekincanufuktepe/reusability-model-2`
 
-These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input and run using new datasets.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
+These two docker images will build containers that have a different number of hidden layers (three and one, respectively) and a different number of nodes than the original model (how many?).  Users are prompted to change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
