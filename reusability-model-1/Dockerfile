@@ -12,7 +12,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y python3 python3-pip git
 
-RUN pip3 install numpy==1.16.4 pandas==0.25.0 keras==2.2.4 tensorflow==1.14.0 matplotlib==3.1.1 pillow==6.1.0 argparse==1.1
+RUN pip3 install numpy==1.16.4 pandas==0.25.0 keras==2.2.4 tensorflow==1.14.0 matplotlib==3.1.1 pillow==6.1.0 argparse==1.1 opencv-python==4.1.0.25
 
 RUN mkdir /usr/ml-project \
 	&& cd /usr/ml-project
