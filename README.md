@@ -29,7 +29,7 @@ In this project, we aimed at improving the reproducibility and reusability of ne
   
 1) Reproducibility of both datasets and models
 
-   If you are 
+   If you want to get the trained model for the classifications of  
 
    `$ docker pull <image>`
   
