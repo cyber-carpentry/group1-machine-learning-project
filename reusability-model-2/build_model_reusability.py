@@ -25,6 +25,29 @@ def OptimizerSelection():
 	elif selection=='5' :
 		return 'adadelta'
 
+from keras.datasets import cifar10, cifar100, mnist, fashion_mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+selection=1
+image_size=28
+category_size=10
+
+# Select the predefined datasets
+def SelectDataset():
+	print("Please Select the Dataset given [1-4] below:")
+	print("1) CIFAR10")
+	print("2) CIFAR100")
+	print("3) MNIST")
+	print("4) FASHION-MNIST")
+	selection = input()
+	if selection=='1' :
+		return cifar10.load_data(), 32, 10, selection
+	elif selection=='2' :
+		return cifar100.load_data(label_mode='fine'), 32, 100, selection
+	elif selection=='3' :
+		return mnist.load_data(), 28, 10, selection
+	elif selection=='4' :
+		return fashion_mnist.load_data(), 28, 10, selection
+
 #change number of epochs
 import numpy
 tmp_num_of_epochs='error'
@@ -45,7 +68,9 @@ from keras.datasets import fashion_mnist
 np.random.seed(1)
 tf.set_random_seed(1)
 
-(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+# Run dataset selcetion function
+#(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+((x_train, y_train), (x_test, y_test)), image_size, category_size, selection=SelectDataset()
 
 type(train_images)
 
@@ -57,7 +82,7 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
 
 #creates output image file that allow visualization of different class types
 
-fig = plt.figure(figsize=(10,10))
+fig = plt.figure(figsize=(category_size,category_size))
 
 for i in range(25):
     plt.subplot(5,5,i+1)
@@ -69,9 +94,9 @@ for i in range(25):
 plt.savefig('item_viz.png')
 
 model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Flatten(input_shape=(image_size, image_size)),
     keras.layers.Dense(3, activation=tf.nn.relu), 
-    keras.layers.Dense(10, activation=tf.nn.softmax)
+    keras.layers.Dense(category_size, activation=tf.nn.softmax)
 ])
 
 model.compile(optimizer=selected_optimizer, 
