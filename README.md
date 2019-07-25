@@ -41,7 +41,7 @@ MNIST: `docker push ekincanufuktepe/mnist-reproducability`
 
 Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reproducability`
 
-These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the X optimization scheme.  Sample output is provided in each of the docker containers, which a new user can use to determine if the model builds have run successfully.
+These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the Adam optimization scheme.  Sample output is provided in each of the docker containers, which a new user can compare with their own output to determine if the model builds have run successfully.
 
 #### 2) Modifying basic neural network models for MNIST and Fashion-MNIST
 
@@ -49,7 +49,7 @@ MNIST: `docker push ekincanufuktepe/mnist-reusability`
 
 Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reusability`
 
-These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
+These two docker images will create containers that build basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
 
 #### 3) Replicability of basic neural network models for MNIST and Fashion-MNIST 
 
@@ -59,7 +59,7 @@ These two docker images will build containers that provide basic trained neural 
 ##### Model #2
 `docker pull ekincanufuktepe/reusability-model-2`
 
-These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
+These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or optimization scheme and can select from a few different training and test data sets.
 
 #### 4) Reusability of datasets
 
