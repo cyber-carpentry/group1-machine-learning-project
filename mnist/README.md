@@ -1,6 +1,4 @@
-Description of files
-* Dockerfile: use to set up and run the basic model
-* build_model.py: sets up a basic model based on Keras MNIST data 
+##Description of files
+* Dockerfile: used to set up and run the basic model
+* build_model.py: sets up the basic model using 1 epoch and the RMS optimization scheme 
 * sample_output.txt: provides sample output information for the basic model
-
-How to modify the file for reusability
