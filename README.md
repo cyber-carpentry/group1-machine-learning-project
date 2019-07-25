@@ -63,7 +63,7 @@ These two docker images will build containers that have a different number of hi
 
 #### 4) Reusability of datasets **
 
-The scripts in this directory allow the user to import new images and process them using the predict_new_image.py python script, which will resize and recolor them for model processing, as well as run them through a saved model, which provides a prediction for what it thinks the image  contains according to the original ten classes.  The directory contains a few sample images, which are names "modified_<item name>.jpeg"
+The scripts in this directory allow the user to import new images and process them using the predict_new_image.py python script, which will resize and recolor them for model processing, as well as run them through a saved model, which provides a prediction for what it thinks the image  contains according to the original ten classes.  The directory contains a few sample images, which are names "modified_<name_of_item>.jpeg".
 
 *In order to run this script, docker build must be run for Model #2 above.
 
