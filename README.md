@@ -10,11 +10,13 @@ In this project, we aimed at improving the reproducibility and reusability of ne
 1) Reproducibility of both datasets and models
 
   `$ docker pull <image>`
+  
   `$ docker run -it <image>`
 
 2) Reusability of neural network models 
   
   `$ docker pull <image>`
+  
   `$ docker run -it <image>`
   
 3) Reusability of datasets
@@ -24,6 +26,7 @@ In this project, we aimed at improving the reproducibility and reusability of ne
 4) Reusability of datasets and models
   
   `$ docker pull <image>`
+  
   `$ docker run -it <image>`
   
 ### Description of files
