@@ -5,7 +5,7 @@
 
 ### Description of Deliverables and Hands-on Instructions
  
-  `$ git clone https://github.com/cyber-carpentry/group1-machine-learning-project`
+In this project, we aimed at improving the reproducibility and reusability of neural network models using MNIST and Fashion-MNIST datasets. In terms of reproducibility, it aims at improving the automatization of model training with existing datasets,  established neural network architecture, and fixed machine learning parameters. In terms of reusability, it provides several options, including reusing the generated model with different datasets, reusing datasets with different neural network models. All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
   
 1) Reproducibility of both datasets and models
 
