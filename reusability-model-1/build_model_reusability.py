@@ -24,6 +24,23 @@ def OptimizerSelection():
 	elif selection=='5' :
 		return 'adadelta'
 
+from keras.datasets import cifar10, cifar100, mnist, fashion_mnist
+def SelectDataset():
+	print("Please Select the Dataset given [1-4] below:")
+	print("1) CIFAR10")
+	print("2) CIFAR100")
+	print("3) MNIST")
+	print("4) FASHION-MNIST")
+	selection = input()
+	if selection=='1' :
+		return cifar10.load_data(), 32, 10
+	elif selection=='2' :
+		return cifar100.load_data(label_mode='fine'), 32, 10
+	elif selection=='3' :
+		return mnist.load_data(), 28, 10
+	elif selection=='4' :
+		return fashion_mnist.load_data(), 28, 10
+
 #change number of epochs
 import numpy
 tmp_num_of_epochs='error'
@@ -37,8 +54,9 @@ num_of_epochs=int(str(tmp_num_of_epochs))
 selected_optimizer=OptimizerSelection()
 
 #import training and test data sets from keras
-from keras.datasets import mnist 
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
+#from keras.datasets import mnist 
+#(x_train, y_train), (x_test, y_test) = mnist.load_data()
+(x_train, y_train), (x_test, y_test), image_size, category_size=SelectDataset()
 
 #imports to_categorical function from keras utilities
 from keras.utils import to_categorical
@@ -48,25 +66,26 @@ x_train = x_train.astype("float32")
 x_test = x_test.astype("float32")
 x_train /= 255
 x_test /= 255
-y_train = to_categorical(y_train, 10)
-y_test = to_categorical(y_test, 10)
+y_train = to_categorical(y_train, category_size)
+y_test = to_categorical(y_test, category_size)
 
 #creates import layer using keras function
 from keras.layers import Input
-i = Input(shape=(28,28))
+i = Input(shape=(image_size,image_size))
 
 #flattens input layer
 from keras.layers import Flatten
-f = Flatten(input_shape=(28,28))
+f = Flatten(input_shape=(image_size,image_size))
 x = f(i)
 
+vector_size=image_size*image_size
 #creates 3 dense (fully-coupled) layers for the model
 from keras.layers import Dense
-d = Dense(512, activation="relu", input_shape=(784,))
+d = Dense(512, activation="relu", input_shape=(vector_size,))
 x2 = d(x)
 d2 = Dense(512, activation="relu", input_shape=(512,))
 x3 = d2(x2)
-d3 = Dense(10, activation="softmax", input_shape=(512,))
+d3 = Dense(category_size, activation="softmax", input_shape=(512,))
 o = d3(x3)
 
 #imports model package from keras
