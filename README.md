@@ -56,10 +56,10 @@ fashion-mnist: <image>
  
 #### 4) Replicability of basic neural network models for mnist and fashion-mnist 
 
-##### MODEL #1
+##### Model #1
 `docker pull ekincanufuktepe/reusability-model-1`
 
-##### MODEL #2
+##### Model #2
 `docker pull ekincanufuktepe/reusability-model-2`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input and run using new datasets.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss as well as select new training and test data sets.
