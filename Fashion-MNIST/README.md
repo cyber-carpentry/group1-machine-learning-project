@@ -1,4 +1,5 @@
-Description of files
-* build_model_fashionmnist.py: sets up a basic model for analyzing fashion MNIST data set
-* item_viz.png: visualizes classification of different clothing categories; way to check if the basic set-up is working
-* sample_output_fashionmnist.txt: provides sample output information for the basic fashion model
+## Description of Files
+* Dockerfile: used to set up and run a basic neural network model that is trained and tested using the Fashion-MNIST dataset
+* build_model_fashionmnist.py: sets up the model using 4 epochs and the Adam optimization scheme; provides accuracy and loss infomation as output to the screen 
+* item_viz.png: visualization of different clothing classifications
+* sample_output_fashionmnist.txt: contains sample output that can be used to see if the Docker container is running properly
