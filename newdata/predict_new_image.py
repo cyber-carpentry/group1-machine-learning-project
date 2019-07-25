@@ -9,10 +9,10 @@ import cv2
 myimage=Image.open("modified_blue_jeans.jpeg")
 image=myimage.resize((28,28),Image.ANTIALIAS)
 image=image.convert('LA')
-image.save("modified_blue_jeans.png")
+image.save("modified.png")
 
 #structurize the image to predict
-image=cv2.imread("modified_blue_jeans.png",0).astype("float32").reshape(1,28,28)
+image=cv2.imread("modified.png",0).astype("float32").reshape(1,28,28)
 image/=255
 #print(image.shape,image.dtype,image)
 
