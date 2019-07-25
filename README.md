@@ -7,6 +7,7 @@
 1) Reproducibility of both datasets and models
 
 `$ docker pull <image>`
+
 2) Reusability of neural network models 
 
 3) Reusability of datasets
