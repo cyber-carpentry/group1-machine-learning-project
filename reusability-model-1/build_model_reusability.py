@@ -4,7 +4,8 @@ def RepresentsInt(s):
                 return True
         except ValueError:
                 return False
-	
+
+# Select the optimizer method
 def OptimizerSelection():
 	print("Please Select the Optimizer [1,5] for the Model:")
 	print("1) SGD")
@@ -29,6 +30,8 @@ from keras.datasets import cifar10, cifar100, mnist, fashion_mnist
 selection=1
 image_size=28
 category_size=10
+
+# Select the predefined datasets
 def SelectDataset():
 	print("Please Select the Dataset given [1-4] below:")
 	print("1) CIFAR10")
@@ -63,18 +66,15 @@ while not RepresentsInt(tmp_num_of_epochs):
 		print("NOT A NUMBER")
 num_of_epochs=int(str(tmp_num_of_epochs))
 
+# Run optimizer selection function
 selected_optimizer=OptimizerSelection()
 
 #import training and test data sets from keras
 #from keras.datasets import mnist 
 #(x_train, y_train), (x_test, y_test) = mnist.load_data()
-#((x_train, y_train), (x_test, y_test)), image_size, category_size=SelectDataset()
-#print(image_size)
-#print(category_size)
-#(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# Run dataset selcetion function
 ((x_train, y_train), (x_test, y_test)), image_size, category_size, selection=SelectDataset()
-#image_size=28
-#category_size=10
 
 #imports to_categorical function from keras utilities
 from keras.utils import to_categorical
@@ -89,6 +89,8 @@ y_test = to_categorical(y_test, category_size)
 
 #creates import layer using keras function
 from keras.layers import Input
+
+# Initialize shape input based on the selected dataset
 i = Input(shape=(image_size,image_size))
 if selection=='1' or selection=='2':
 	i = Input(shape=(image_size, image_size, 3))
