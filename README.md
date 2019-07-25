@@ -61,7 +61,7 @@ These two docker images will create containers that build basic trained neural n
 
 These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or optimization scheme and can select from a few different training and test data sets.
 
-#### 4) Reusability of datasets
+#### 4) Reusability of datasets ** not quite working yet **
 
 The scripts in this directory allow the user to import new images and process them using the predict_new_image.py python script, which will resize and recolor them for model processing, as well as run them through a saved model, which provides a prediction for what it thinks the image  contains according to the original ten classes.  The directory contains a few sample images, which are names "modified_<name_of_item>.jpeg".
 
