@@ -12,6 +12,11 @@ This project provides Docker images that have been prepared with all necessary p
 ### Description of Deliverables
  
 All of these deliverables have been published as DockerHub images and can be easily used simply by running a DockerHub container. 
+
+mnist: builds and trains a basic neural network using the mnist dataset to recognized handwritten numbers
+mnist_XX: allows the user to change parameters and optimization scheme of basic neural network model
+fashion-mnist
+
   
 1) Reproducibility of both datasets and models
 
@@ -43,8 +48,10 @@ All of these deliverables have been published as DockerHub images and can be eas
 
 2. From the command line interface, docker pull the image from DockerHub.
 
-\\\ docker pull <image> \\\
+ `$ docker pull <image>`
 
 3. Use docker to run the desired image.
 
-\\\ docker run -it <image> \\\
+ `$ docker run -it <image>`
+
+4. If applicable, follow the prompts to get the model built and trained.
