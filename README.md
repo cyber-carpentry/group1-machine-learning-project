@@ -69,11 +69,9 @@ These two docker images will create containers that build basic trained neural n
 
 ##### Model #1
 
-   
    `docker pull ekincanufuktepe/reusability-model-1`
 
 ##### Model #2
-
    
    `docker pull ekincanufuktepe/reusability-model-2`
 
@@ -91,8 +89,8 @@ The scripts in this directory allow the user to import new images and process th
  
 - make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
  
-   `cd ..`
+`cd ..`
  
-   `cd newdata/`
+`cd newdata/`
 
-   `python3 predict_new_image.py` # modify this script by 'nano' to change the image that you are analyzing
+`python3 predict_new_image.py` # modify this script by 'nano' to change the image that you are analyzing
