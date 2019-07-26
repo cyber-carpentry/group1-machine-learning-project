@@ -25,11 +25,19 @@ This project provides Docker images that have been prepared with all necessary p
  
    For example:  `$ docker run -it ekincanufuktepe/mnist-reproducability`
    
-   *options: if you want to save your results after you exit docker containers, you can try to use --mount:
+   *options: 
+   
+   *If you want to save your results after you exit docker containers, you can try to use --mount:
    
    `$ docker volume create output-vol`
    
    `$ docker run --mount source=output-vol,target=/usr/ml-project/ -it <image>`
+   
+   *Now you can review the results by:
+   
+   `$ docker volume inspect output-vol`
+   
+   `$ sudo ls <path to your volume>`
 
 4. If applicable, follow the prompts to get the model built and trained.
 
