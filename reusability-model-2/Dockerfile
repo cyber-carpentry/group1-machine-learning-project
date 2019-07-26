@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y python3 python3-pip git nano
 
 RUN pip3 install numpy==1.16.4 pandas==0.25.0 keras==2.2.4 tensorflow==1.14.0 matplotlib==3.1.1 pillow==6.1.0 argparse==1.1 opencv-python==4.1.0.25
 
-RUN apt-get install -y build-essential && cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+RUN apt-get install -y build-essential cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 
 RUN mkdir /usr/ml-project \
 	&& cd /usr/ml-project
