@@ -87,7 +87,7 @@ The scripts in this directory allow the user to import new images and process th
 
    `docker run -it ekincanufuktepe/reusability-model-2`
  
-- make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
+*Make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
  
 `cd ..`
  
