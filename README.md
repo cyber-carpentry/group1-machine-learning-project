@@ -15,21 +15,21 @@ This project provides Docker images that have been prepared with all necessary p
 
 2. From the command line interface, docker pull the image from Docker Hub (see below for image descriptions).
 
- `$ docker pull <image>`
+   `$ docker pull <image>`
  
- For example:  `$ docker pull ekincanufuktepe/mnist-reproducability`
+   For example:  `$ docker pull ekincanufuktepe/mnist-reproducability`
 
 3. Use docker to run the desired image (see below for image descriptions).
 
- `$ docker run -it <image>`
+   `$ docker run -it <image>`
  
- For example:  `$ docker run -it ekincanufuktepe/mnist-reproducability`
+   For example:  `$ docker run -it ekincanufuktepe/mnist-reproducability`
 
 4. If applicable, follow the prompts to get the model built and trained.
 
 5. To exit the container, type the following at the command prompt:
 
- `$ exit`
+   `$ exit`
 
 ### Description of Deliverables
  
@@ -69,18 +69,18 @@ The scripts in this directory allow the user to import new images and process th
 
 *In order to run this script, docker build must be run for Model #2 above.
 
- `docker pull ekincanufuktepe/reusability-model-2`
+`docker pull ekincanufuktepe/reusability-model-2`
 
- `docker run -it ekincanufuktepe/reusability-model-2`
+`docker run -it ekincanufuktepe/reusability-model-2`
  
- - make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
+- make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
 
- *`apt-get install python-opencv` (You don't need this steps after 10:00am July 26, 2019)
+  *`apt-get install python-opencv` (You don't need this steps after 10:00am July 26, 2019)
  
-   *which country choose "2", which time zone choose "105"
+    *which country choose "2", which time zone choose "105"
  
- `cd ..`
+`cd ..`
  
- `cd newdata/`
+`cd newdata/`
 
- `python3 predict_new_image.py` #modify this script to change the image that you are analyzing
+`python3 predict_new_image.py` #modify this script to change the image that you are analyzing
