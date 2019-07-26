@@ -69,10 +69,12 @@ These two docker images will create containers that build basic trained neural n
 
 ##### Model #1
 
+   
    `docker pull ekincanufuktepe/reusability-model-1`
 
 ##### Model #2
 
+   
    `docker pull ekincanufuktepe/reusability-model-2`
 
 These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or optimization scheme and can select from a few different training and test data sets (CIFAR10, CIFAR100, MNIST, Fashion-MNIST).
