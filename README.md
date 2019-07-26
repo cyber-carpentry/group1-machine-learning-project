@@ -73,9 +73,12 @@ The scripts in this directory allow the user to import new images and process th
  
  - make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
 
- `apt-get install python-opencv` which country choose "2", which time zone choose "105" (for some reasons, opencv can't be built into an image)
+ `apt-get install python-opencv` 
+ 
+  *which country choose "2", which time zone choose "105" (for some reasons, opencv can't be built into an image)
  
  `cd ../newimages/`
 
  `python3 predict_new_image.py` #modify this script to change the image that you are analyzing
-(the index of the largest number indicate the predicted class) 
+
+  *the index of the largest number indicates the predicted class) 
