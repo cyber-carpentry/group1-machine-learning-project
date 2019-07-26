@@ -75,7 +75,7 @@ The scripts in this directory allow the user to import new images and process th
 
   *`apt-get install python-opencv` (You don't need this steps after 10:00am July 26, 2019)
  
-    *which country choose "2", which time zone choose "105" (for some reasons, opencv can't be built into an image)
+   *which country choose "2", which time zone choose "105" (for some reasons, opencv can't be built into an image)
  
  `cd ../newimages/`
 
