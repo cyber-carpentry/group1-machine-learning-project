@@ -6,7 +6,7 @@ import os
 import cv2
 
 #resize the images
-myimage=Image.open("modified_blue_jeans.jpeg")      #if you want to test with your own images, you need to put the images in this folder, and chagne the imag$
+myimage=Image.open("Blue_Tshirt.jpg")      #if you want to test with your own images, you need to put the images in this folder, and chagne the imag$
 image=myimage.resize((28,28),Image.ANTIALIAS)
 image=image.convert('LA')
 image.save("modified.png")
