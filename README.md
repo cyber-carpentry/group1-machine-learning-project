@@ -81,4 +81,4 @@ The scripts in this directory allow the user to import new images and process th
 
  `python3 predict_new_image.py` #modify this script to change the image that you are analyzing
 
-  *the index of the largest number indicates the predicted class) 
+  *the index of the largest number indicates the predicted class
