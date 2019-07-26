@@ -29,7 +29,7 @@ This project provides Docker images that have been prepared with all necessary p
 
 5. To exit the container, type the following at the command prompt:
 
- `$ exit()`
+ `$ exit`
 
 ### Description of Deliverables
  
@@ -37,17 +37,17 @@ All of these deliverables have been published as Docker Hub images and can be ea
   
 #### 1) Reproducing basic neural network models for MNIST and Fashion-MNIST
 
-MNIST: `docker push ekincanufuktepe/mnist-reproducability`
+MNIST: `docker pull ekincanufuktepe/mnist-reproducability`
 
-Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reproducability`
+Fashion-MNIST: `docker pull ekincanufuktepe/fashion-mnist-reproducability`
 
 These two docker images will build containers that provide basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively.  The MNIST model is set to run using 1 epoch and the RMS optimization scheme.  The Fashion-MNIST model is set to run using 4 epochs and the Adam optimization scheme.  Sample output is provided in each of the docker containers, which a new user can compare with their own output to determine if the model builds have run successfully.
 
 #### 2) Modifying basic neural network models for MNIST and Fashion-MNIST
 
-MNIST: `docker push ekincanufuktepe/mnist-reusability`
+MNIST: `docker pull ekincanufuktepe/mnist-reusability`
 
-Fashion-MNIST: `docker push ekincanufuktepe/fashion-mnist-reusability`
+Fashion-MNIST: `docker pull ekincanufuktepe/fashion-mnist-reusability`
 
 These two docker images will create containers that build basic trained neural network models for the MNIST and Fashion-MNIST dataset, respectively, that can be adjusted based on user input.  Users can change the number of epochs and/or the optimization scheme for each model to try and improve reliability and reduce loss.
 
@@ -69,7 +69,7 @@ The scripts in this directory allow the user to import new images and process th
 
  `docker pull ekincanufuktepe/reusability-model-2`
 
- `docker run ekincanufuktepe/reusability-model-2`
+ `docker run -it ekincanufuktepe/reusability-model-2`
  
  - make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
 
