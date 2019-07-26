@@ -33,5 +33,6 @@ a=numpy.argmax(pred)
 
 classname=['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 
                        'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+print("This item is predicted as a:")
 print(classname[a])
 
