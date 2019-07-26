@@ -80,10 +80,6 @@ The scripts in this directory allow the user to import new images and process th
 `docker run -it ekincanufuktepe/reusability-model-2`
  
 - make sure to select Fashion-MNIST as the training and test data set (3rd prompt)
-
-  *`apt-get install python-opencv` (You don't need this steps after 10:00am July 26, 2019)
- 
-    *which country choose "2", which time zone choose "105"
  
 `cd ..`
  
