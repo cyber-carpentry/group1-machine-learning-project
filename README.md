@@ -25,7 +25,7 @@ This project provides Docker images that have been prepared with all necessary p
  
    For example:  `$ docker run -it ekincanufuktepe/mnist-reproducability`
    
-   *options: 
+   OPTIONS: 
    
    *If you want to save your results after you exit docker containers, you can try to use --mount:
    
