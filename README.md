@@ -24,6 +24,12 @@ This project provides Docker images that have been prepared with all necessary p
    `$ docker run -it <image>`
  
    For example:  `$ docker run -it ekincanufuktepe/mnist-reproducability`
+   
+   *options: if you want to save your results after you exit docker containers, you can try to use --mount:
+   
+   `$ docker volume create output-vol`
+   
+   `$ docker run --mount source=output-vol,target=/usr/ml-project/ -it <image>`
 
 4. If applicable, follow the prompts to get the model built and trained.
 
@@ -61,7 +67,7 @@ These two docker images will create containers that build basic trained neural n
 
 `docker pull ekincanufuktepe/reusability-model-2`
 
-These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or optimization scheme and can select from a few different training and test data sets (CIFAR10, CIFAR100, MNIST, Fashion-MNIST).
+These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or optimization scheme and can select from a few different training and test data sets.
 
 #### 4) Reusability of datasets
 
