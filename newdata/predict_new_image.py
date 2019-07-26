@@ -29,5 +29,9 @@ print("Loaded model from disk")
 pred = loaded_model.predict(image)
 print(pred)
 
-print('  T-shirt/top   ', 'Trouser      ', 'Pullover     ', 'Dress        ', 'Coat         ', '\n'
-      '  Sandal        ', 'Shirt        ', 'Sneaker      ', 'Bag          ', 'Ankle boot   ')
+a=numpy.argmax(pred)
+
+classname=['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 
+                       'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+print(classname[a])
+
