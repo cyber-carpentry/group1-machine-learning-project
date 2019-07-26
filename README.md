@@ -54,9 +54,11 @@ These two docker images will create containers that build basic trained neural n
 #### 3) Replicability of basic neural network models for MNIST and Fashion-MNIST 
 
 ##### Model #1
+
 `docker pull ekincanufuktepe/reusability-model-1`
 
 ##### Model #2
+
 `docker pull ekincanufuktepe/reusability-model-2`
 
 These two docker images will build containers that have a different number of hidden layers (2 and 1, respectively) and a different number of nodes than the original model (512 and 3, respectively).  These differences illustrate how the number of layers and nodes can affect model accuracy and loss.  Users are prompted to change the number of epochs and/or optimization scheme and can select from a few different training and test data sets.
@@ -75,7 +77,7 @@ The scripts in this directory allow the user to import new images and process th
 
   *`apt-get install python-opencv` (You don't need this steps after 10:00am July 26, 2019)
  
-   *which country choose "2", which time zone choose "105" (for some reasons, opencv can't be built into an image)
+   *which country choose "2", which time zone choose "105"
  
  `cd ../newimages/`
 
